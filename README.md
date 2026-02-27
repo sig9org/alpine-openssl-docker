@@ -8,7 +8,7 @@
 ### OpenSSL 3.x
 
 ```sh
-docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:3.23.2_openssl-3.5.4-r0
+docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:3.23.3_openssl-3.5.5-r0
 ```
 
 ### OpenSSL 1.x
@@ -19,22 +19,22 @@ docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:3.
 
 ## How to build
 
-### 3.23.2_openssl-3.5.4-r0
+### 3.23.3_openssl-3.5.5-r0
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
     --tag sig9/alpine-openssl:latest \
-    versions/3.23.2_openssl-3.5.4-r0/
+    versions/3.23.3_openssl-3.5.5-r0/
 ```
 
 ```sh
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
     --output=type=registry \
-    --tag sig9/alpine-openssl:3.23.2_openssl-3.5.4-r0 \
-    versions/3.23.2_openssl-3.5.4-r0/
+    --tag sig9/alpine-openssl:3.23.3_openssl-3.5.5-r0 \
+    versions/3.23.3_openssl-3.5.5-r0/
 ```
 
 ### 3.16.9_openssl-1.1.1w-r1
@@ -52,7 +52,7 @@ docker buildx build \
 ### Connect to the container shell
 
 ```sh
-docker run -it -d --name alpine alpine:3.23.2
+docker run -it -d --name alpine alpine:3.23.3
 docker exec -it alpine ash
 ```
 
