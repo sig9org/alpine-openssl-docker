@@ -1,0 +1,23 @@
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  clean:
+    aliases: [c]
+    desc: Clean up
+    cmds:
+      - find . -type d -name ".terraform" -prune -exec rm -rf {} +
+      - find . -name ".DS_Store" -delete
+      - find . -name ".terraform.lock.hcl" -delete
+      - find . -name "hash" -delete
+      - find . -name "terraform.tfstate" -delete
+      - find . -name "terraform.tfstate.backup" -delete
+
+  run:
+    aliases: [r]
+    desc: Run
+    cmds:
+      - uv run python check-version.py

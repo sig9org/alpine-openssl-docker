@@ -1,0 +1,7 @@
+[project]
+name = "alpine-openssl-docker"
+version = "0.1.0"
+description = "Docker image of Alpine with OpenSSL installed"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = ["requests>=2.32.5", "rich>=14.3.3"]
