@@ -7,6 +7,7 @@ This is a Docker container image based on [Alpine](https://hub.docker.com/_/alpi
 [sig9/alpine-openssl](https://hub.docker.com/r/sig9/alpine-openssl) supports the following tags:
 
 - [latest](https://hub.docker.com/layers/sig9/alpine-openssl/latest)
+- [3.5.6-r0](https://hub.docker.com/layers/sig9/alpine-openssl/3.5.6-r0)
 - [3.5.5-r0](https://hub.docker.com/layers/sig9/alpine-openssl/3.5.5-r0)
 - [3.3.6-r0](https://hub.docker.com/layers/sig9/alpine-openssl/3.3.6-r0)
 - [3.1.8-r1](https://hub.docker.com/layers/sig9/alpine-openssl/3.1.8-r1)
@@ -31,7 +32,7 @@ This is a Docker container image based on [Alpine](https://hub.docker.com/_/alpi
 ### OpenSSL 3.x
 
 ```sh
-docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:3.5.5-r0
+docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:3.5.6-r0
 ```
 
 ### OpenSSL 1.x
@@ -42,13 +43,13 @@ docker run -v "$(pwd)":/root -it -d --name alpine-openssl sig9/alpine-openssl:1.
 
 ## How to build
 
-### 3.5.5-r0
+### 3.5.6-r0
 
 ```sh
 docker buildx build \
   --build-arg ALPINE=3.23 \
   --build-arg REPOSITORY=3.23 \
-  --build-arg OPENSSL=3.5.5-r0 \
+  --build-arg OPENSSL=3.5.6-r0 \
   --platform linux/amd64,linux/arm/v6 \
   --output=type=registry \
   --tag sig9/alpine-openssl:latest \
@@ -59,10 +60,10 @@ docker buildx build \
 docker buildx build \
   --build-arg ALPINE=3.23 \
   --build-arg REPOSITORY=3.23 \
-  --build-arg OPENSSL=3.5.5-r0 \
+  --build-arg OPENSSL=3.5.6-r0 \
   --platform linux/amd64,linux/arm/v6 \
   --output=type=registry \
-  --tag sig9/alpine-openssl:3.5.5-r0 \
+  --tag sig9/alpine-openssl:3.5.6-r0 \
   .
 ```
 
@@ -71,7 +72,7 @@ docker buildx build \
 ### Connect to the container shell
 
 ```sh
-docker run -it -d --name alpine alpine:3.23.3
+docker run -it -d --name alpine alpine:3.23.4
 docker exec -it alpine ash
 ```
 
