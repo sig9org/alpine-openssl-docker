@@ -24,3 +24,4 @@ ALPINE=3.19 REPOSITORY=3.19 OPENSSL=3.1.8-r1 PLATFORM=linux/amd64,linux/arm/v6 /
 ALPINE=3.21 REPOSITORY=3.21 OPENSSL=3.3.6-r0 PLATFORM=linux/amd64,linux/arm/v6 /bin/sh -c ./build.sh
 #ALPINE=3.22 REPOSITORY=3.22 OPENSSL=3.5.5-r0 PLATFORM=linux/amd64,linux/arm/v6 /bin/sh -c ./build.sh
 ALPINE=3.23 REPOSITORY=3.23 OPENSSL=3.5.5-r0 PLATFORM=linux/amd64,linux/arm/v6 /bin/sh -c ./build.sh
+LATEST=true ALPINE=3.24 REPOSITORY=3.24 OPENSSL=3.5.7-r0 PLATFORM=linux/amd64,linux/arm/v6 /bin/sh -c ./build.sh
