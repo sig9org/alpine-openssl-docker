@@ -1,6 +1,6 @@
-TAGS=(--tag "sig9/alpine-openssl:${OPENSSL}")
+TAGS="--tag sig9/alpine-openssl:${OPENSSL}"
 if [ -n "${LATEST}" ]; then
-  TAGS+=(--tag "sig9/alpine-openssl:latest")
+  TAGS="${TAGS} --tag sig9/alpine-openssl:latest"
 fi
 
 docker buildx build \
@@ -9,5 +9,5 @@ docker buildx build \
   --build-arg OPENSSL=${OPENSSL} \
   --platform ${PLATFORM} \
   --output=type=registry \
-  "${TAGS[@]}" \
+  $TAGS \
   .
