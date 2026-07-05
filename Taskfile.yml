@@ -17,7 +17,7 @@ tasks:
       - find . -name "terraform.tfstate.backup" -delete
 
   run:
-    aliases: [r]
-    desc: Run
+    aliases: [v]
+    desc: Check versions
     cmds:
-      - uv run python check-version.py
+      - uv run python check-versions.py
